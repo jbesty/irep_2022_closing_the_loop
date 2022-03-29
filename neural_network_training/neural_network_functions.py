@@ -209,7 +209,7 @@ def execute_epoch(network, training_data_loader, validation_data_loader, optimis
 
     if validation_loss_dict['validation_loss'] < best_validation_loss:
         best_epoch = network.epochs_total
-        best_validation_loss = validation_loss_dict['validation_loss']
+        best_validation_loss = validation_loss_dict['validation_loss'].copy()
         torch.save(network.state_dict(), model_save_path)
 
     wandb.log(training_loss_dict, commit=False)
