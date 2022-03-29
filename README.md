@@ -19,7 +19,7 @@ The file `environment_linux.yml` contains a similar environment for linux machin
 
 ## WandB for logging and run configuration
 
-The present implementation relies on the platform 'WandB' for configuring, launching, and logging the different runs.
+The present implementation relies on the platform [wandb](https://wandb.ai) for configuring, launching, and logging the different runs.
 The simplest configuration is shown in `workflow.py`, for the hyperparameter tuning refer
 to `create_hyperparameter_sweep.py` and `run_agent_from_sweep_id.py`. Wandb requires an account (free for light-weight
 logging, as it is the case here) and an API key for the login, see their webpage for further details.
@@ -109,9 +109,9 @@ bound tightening (analytical and optimisation based) and to verify the behaviour
 The implementation of the neural network training is done in [pytorch](https://pytorch.org/). The neural network
 verification is implemented using [pyomo](http://www.pyomo.org/). We furthermore use [Gurobi](https://www.gurobi.com)
 for solving the resulting optimization problems. As mentioned above, the logging and run configuration
-utilises [WandB](https://wandb.ai).
+utilises [wandb](https://wandb.ai).
 
-## Citation
+## Paper reference
 
 ```
 @misc{Stiasny_closing_the_loop_2022,
