@@ -17,7 +17,7 @@ conda activate irep_2022
 
 The file `environment_linux.yml` contains a similar environment for linux machines. 
 
-## WandB for logging and run configuration
+## wandb for logging and run configuration
 
 The present implementation relies on the platform [wandb](https://wandb.ai) for configuring, launching, and logging the different runs.
 The simplest configuration is shown in `workflow.py`, for the hyperparameter tuning refer
